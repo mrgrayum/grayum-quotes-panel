@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walt Quotes Panel — Flash Firmware</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 640px;
+         margin: 2rem auto; padding: 0 1rem; line-height: 1.55; color: #1a1a1a; }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  .sub { color: #555; margin-top: 0; }
+  esp-web-install-button { display: block; margin: 1.5rem 0; }
+  button.fallback { font-size: 1rem; padding: 0.6rem 1.2rem; }
+  ol li { margin: 0.4rem 0; }
+  .note { background: #f4f1ea; border-left: 3px solid #8a7d5a;
+          padding: 0.6rem 0.9rem; margin: 1rem 0; }
+  code { background: #eee; padding: 0 0.25rem; }
+</style>
+</head>
+<body>
+<h1>Daily Quotes Panel — Firmware Installer</h1>
+<p class="sub">For the SeeedStudio XIAO 7.5" ePaper Panel (ESP32-C3). Firmware 0.1.0.</p>
+
+<ol>
+  <li>Use <strong>Chrome or Edge on a computer</strong> (the installer needs Web Serial — it won't work in Safari, Firefox, or on a phone).</li>
+  <li>Plug the panel into the computer with a USB-C cable.</li>
+  <li>Click <strong>Connect</strong> below, pick the panel's serial port, then click <strong>Install</strong>. If it asks, let it erase the device — this is a first install.</li>
+  <li>Wait for "Installation complete," then close the installer. The panel restarts itself.</li>
+</ol>
+
+<esp-web-install-button manifest="flash-manifest.json">
+  <button slot="activate" class="fallback">Connect &amp; Install Firmware</button>
+  <span slot="unsupported">This browser doesn't support Web Serial — please open this page in Chrome or Edge on a computer.</span>
+  <span slot="not-allowed">Serial access was blocked — reload the page and allow the serial port prompt.</span>
+</esp-web-install-button>
+
+<div class="note">
+<strong>Panel doesn't show up?</strong> Unplug it, hold the panel's small
+<strong>BOOT</strong> button while plugging the USB cable back in, click
+Connect, and release the button once the port appears / the installer
+connects.
+</div>
+
+<h2>After flashing — WiFi setup</h2>
+<ol>
+  <li>The firmware ships with <strong>no WiFi saved</strong>. To open its setup hotspot right away, power-cycle the panel <strong>three times in a row</strong> (unplug / replug USB three times, a few seconds apart).</li>
+  <li>On your phone, join the WiFi network <strong>WaltQuotes-Setup</strong>. The setup page should pop up on its own; if it doesn't, browse to <code>192.168.4.1</code>.</li>
+  <li>Type your home WiFi name and password and tap <strong>Save &amp; reconnect</strong>. The panel reboots, connects, syncs its clock, and pulls up today's quote. (Before Dec 1 it fetches the quote live; the preloaded year starts Dec 1, 2026.)</li>
+</ol>
+<p>The quote on screen never changes during setup, and if the panel ever
+loses WiFi for three wake-ups in a row it re-opens the same setup hotspot
+on its own.</p>
+</body>
+</html>
