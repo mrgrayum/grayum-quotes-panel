@@ -12,10 +12,11 @@
     "sha256": "4348cb19b4b5620ba80e7f1b8de53d4674a9ce183d2ebb41a21291566b086bff"
   },
   "firmware": {
-    "version": "0.1.0",
-    "file": "",
-    "url": "",
-    "sha256": "",
-    "note": "Empty url = no firmware update published yet. When publishing an OTA build: set file to \"daily_quote_panel.bin\", url to \"https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin\", sha256 to the .bin digest, and version to the new build's FIRMWARE_VERSION."
+    "version": "0.1.2",
+    "file": "daily_quote_panel.bin",
+    "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
+    "sha256": "b64c787f53addd9acb6d96a2a9f162afdf159a7f88e9b9d16cfd1004d28d597a",
+    "note": "v0.1.2 published 2026-11-16: fixes the glyph blit byte/bit offset bug that garbled all rendered text in v0.1.0/v0.1.1. The firmware channel reads only version + url; sha256/sizeBytes are recorded for verification. httpUpdate fetches the APP image (daily_quote_panel.bin), not the merged flash image.",
+    "sizeBytes": 1287280
   }
 }
