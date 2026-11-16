@@ -1,0 +1,1 @@
+{"builds":[{"chipFamily":"ESP32-C3","parts":[{"offset":0,"path":"daily_quote_panel_merged.bin"}]}],"funding_url":"","home_assistant_domain":"","name":"Walt Quotes Panel (XIAO 7.5 ePaper)","version":"0.1.0"}
