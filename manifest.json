@@ -1,0 +1,21 @@
+{
+  "format": 1,
+  "generated": "2026-11-07",
+  "schedule": {
+    "version": 1,
+    "first": "2026-12-01",
+    "last": "2027-11-30",
+    "count": 365,
+    "file": "quotes_schedule.json",
+    "url": "https://mrgrayum.github.io/grayum-quotes-panel/quotes_schedule.json",
+    "sizeBytes": 48907,
+    "sha256": "4348cb19b4b5620ba80e7f1b8de53d4674a9ce183d2ebb41a21291566b086bff"
+  },
+  "firmware": {
+    "version": "0.1.0",
+    "file": "",
+    "url": "",
+    "sha256": "",
+    "note": "Empty url = no firmware update published yet. When publishing an OTA build: set file to \"daily_quote_panel.bin\", url to \"https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin\", sha256 to the .bin digest, and version to the new build's FIRMWARE_VERSION."
+  }
+}
