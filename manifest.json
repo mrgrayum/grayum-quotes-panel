@@ -1,22 +1,22 @@
 {
   "format": 1,
-  "generated": "2026-11-18",
+  "generated": "2026-11-19",
   "schedule": {
-    "version": 2,
-    "first": "2026-12-01",
+    "version": 3,
+    "first": "2026-11-09",
     "last": "2027-11-30",
-    "count": 365,
+    "count": 387,
     "file": "quotes_schedule.json",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/quotes_schedule.json",
-    "sizeBytes": 47697,
-    "sha256": "3fdc48c8a4cf9c8c0182320a23371308fb70bd7482e3095bfc5908b3bf6ff969"
+    "sizeBytes": 50574,
+    "sha256": "87f87ac7e16c99a8c1c26ca8dab93bca42b282b00b13880bc9b81945e80e9207"
   },
   "firmware": {
-    "version": "0.1.5",
+    "version": "0.1.6",
     "file": "daily_quote_panel.bin",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
-    "sha256": "2d96e02773cfd00677acba90c81e514c8481adae4c1668f9420c5534fa56309b",
-    "note": "v0.1.5 (built 2026-11-18): robustness build. Date belief + last rendered date persisted in NVS (survive power cuts); dateless fallback paint advances at most one day per outage (review fix); RTC hardware watchdog armed during wakes; WiFi joins pick the strongest access point for the SSID; setup page gains a force-update checkbox, signal-strength network list, last-connection report, status line, test-paint button and forget-network button. Schedule v2 remains the embedded baseline. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification. httpUpdate fetches the APP image, not the merged flash image.",
-    "sizeBytes": 1310672
+    "sha256": "88bf82b22666a2890070a59f2e76e2056c7750896da8a805d96e378c2c42612a",
+    "note": "v0.1.6 (built 2026-11-19): the November fix. Schedule v3 is the embedded baseline (starts 2026-11-09, the cycle start) in the new slim table format, so November paints on-device and WiFi is a check-in again. Stubborn join (directed strongest, plain begin, then each remaining AP in one call; join record written once per call); raw disconnect reason on the setup page; date estimator measures actual sleep via the RTC clock instead of crediting the programmed duration; test-paint demo no longer marks itself rendered; post-sync repaint on the schedule path; version splash after a firmware or schedule change. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification. httpUpdate fetches the APP image, not the merged flash image.",
+    "sizeBytes": 1308144
   }
 }
