@@ -12,11 +12,11 @@
     "sha256": "87f87ac7e16c99a8c1c26ca8dab93bca42b282b00b13880bc9b81945e80e9207"
   },
   "firmware": {
-    "version": "0.1.7",
+    "version": "0.1.8",
     "file": "daily_quote_panel.bin",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
-    "sha256": "c38a48912c524c673919612ee73ed96787cf4e57c8d97edf8ddb7e3cb4c6d090",
-    "note": "v0.1.7 (built 2026-11-23): two changes on the v0.1.6 base, schedule v3 unchanged. (1) Splash repaint: a boot that shows the version splash now repaints the day's quote on the schedule paths even when that date is already marked rendered, so an update day no longer leaves the firmware text on screen. (2) Quick-sync-first on the dated schedule path: one bounded join attempt (strongest AP only, ~10 s cap) + NTP before painting from the clock estimate; true time makes the paint decision use the true date and the upkeep reuses the connection, while no time means the wake proceeds exactly as v0.1.6 (estimate paint, full stubborn-join upkeep). The firmware channel reads only version + url; sha256/sizeBytes recorded for verification. httpUpdate fetches the APP image, not the merged flash image.",
-    "sizeBytes": 1308688
+    "sha256": "0e85dadfe191afd73cf80077a97c2c6e27033abf0715e4741594455a14a64b64",
+    "note": "v0.1.8 (built 2026-11-23): ONE change on the v0.1.6 base, schedule v3 unchanged. Splash repaint: a boot that shows the version splash now repaints the day's quote on the schedule paths even when that date is already marked rendered, so an update day no longer leaves the firmware text on screen. The wake order is exactly v0.1.6 \u2014 paint first from the internal clock, then WiFi upkeep; the quick-sync-first variant built as 0.1.7 was deliberately not shipped (Matt's Nov 23 decision) and is superseded by this build. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification. httpUpdate fetches the APP image, not the merged flash image.",
+    "sizeBytes": 1308176
   }
 }
