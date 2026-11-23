@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generated": "2026-11-19",
+  "generated": "2026-11-23",
   "schedule": {
     "version": 3,
     "first": "2026-11-09",
@@ -12,11 +12,11 @@
     "sha256": "87f87ac7e16c99a8c1c26ca8dab93bca42b282b00b13880bc9b81945e80e9207"
   },
   "firmware": {
-    "version": "0.1.6",
+    "version": "0.1.7",
     "file": "daily_quote_panel.bin",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
-    "sha256": "88bf82b22666a2890070a59f2e76e2056c7750896da8a805d96e378c2c42612a",
-    "note": "v0.1.6 (built 2026-11-19): the November fix. Schedule v3 is the embedded baseline (starts 2026-11-09, the cycle start) in the new slim table format, so November paints on-device and WiFi is a check-in again. Stubborn join (directed strongest, plain begin, then each remaining AP in one call; join record written once per call); raw disconnect reason on the setup page; date estimator measures actual sleep via the RTC clock instead of crediting the programmed duration; test-paint demo no longer marks itself rendered; post-sync repaint on the schedule path; version splash after a firmware or schedule change. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification. httpUpdate fetches the APP image, not the merged flash image.",
-    "sizeBytes": 1308144
+    "sha256": "c38a48912c524c673919612ee73ed96787cf4e57c8d97edf8ddb7e3cb4c6d090",
+    "note": "v0.1.7 (built 2026-11-23): two changes on the v0.1.6 base, schedule v3 unchanged. (1) Splash repaint: a boot that shows the version splash now repaints the day's quote on the schedule paths even when that date is already marked rendered, so an update day no longer leaves the firmware text on screen. (2) Quick-sync-first on the dated schedule path: one bounded join attempt (strongest AP only, ~10 s cap) + NTP before painting from the clock estimate; true time makes the paint decision use the true date and the upkeep reuses the connection, while no time means the wake proceeds exactly as v0.1.6 (estimate paint, full stubborn-join upkeep). The firmware channel reads only version + url; sha256/sizeBytes recorded for verification. httpUpdate fetches the APP image, not the merged flash image.",
+    "sizeBytes": 1308688
   }
 }
