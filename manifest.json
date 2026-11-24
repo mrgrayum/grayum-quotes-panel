@@ -12,11 +12,11 @@
     "sha256": "4ea67d49e1acc6a99d6340d6e9a0f9ca66cbd4b917f25e36691e642758a2d49d"
   },
   "firmware": {
-    "version": "0.1.12",
+    "version": "0.1.13",
     "file": "daily_quote_panel.bin",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
-    "sha256": "f23ade20dc0d5a43a9ddc276f07182fc2c2753e6a1041c5d86ab5db891b0cf09",
-    "note": "v0.1.12 (built 2026-11-24): saving display settings on the setup page now also repaints the quote with the new settings immediately (the same hold-aware paint as 'Show the quote now') \u2014 no second tap needed. Includes the v0.1.11 setup-page iOS CSS fix verbatim; everything else is exactly v0.1.10. Panels on 0.1.10 update straight to this build. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
-    "sizeBytes": 1307520
+    "sha256": "e7697cbfbbd8ea079f5a54e458ad3a6a88f412d740d7d7e32742c2aa6923b9a4",
+    "note": "v0.1.13 (built 2026-11-24): setup-page paints (Save display settings and 'Show the quote now') no longer advance to the next day's quote when the panel has no date belief in the setup window \u2014 they repaint the quote the panel is currently on. The morning wake's dateless fallback advance is unchanged. Everything else is exactly v0.1.12. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
+    "sizeBytes": 1307584
   }
 }
