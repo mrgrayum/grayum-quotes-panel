@@ -1,22 +1,22 @@
 {
   "format": 1,
-  "generated": "2026-11-23",
+  "generated": "2026-11-24",
   "schedule": {
-    "version": 3,
+    "version": 4,
     "first": "2026-11-09",
     "last": "2027-11-30",
     "count": 387,
     "file": "quotes_schedule.json",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/quotes_schedule.json",
-    "sizeBytes": 50574,
-    "sha256": "87f87ac7e16c99a8c1c26ca8dab93bca42b282b00b13880bc9b81945e80e9207"
+    "sizeBytes": 52842,
+    "sha256": "4ea67d49e1acc6a99d6340d6e9a0f9ca66cbd4b917f25e36691e642758a2d49d"
   },
   "firmware": {
-    "version": "0.1.8",
+    "version": "0.1.9",
     "file": "daily_quote_panel.bin",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
-    "sha256": "0e85dadfe191afd73cf80077a97c2c6e27033abf0715e4741594455a14a64b64",
-    "note": "v0.1.8 (built 2026-11-23): ONE change on the v0.1.6 base, schedule v3 unchanged. Splash repaint: a boot that shows the version splash now repaints the day's quote on the schedule paths even when that date is already marked rendered, so an update day no longer leaves the firmware text on screen. The wake order is exactly v0.1.6 \u2014 paint first from the internal clock, then WiFi upkeep; the quick-sync-first variant built as 0.1.7 was deliberately not shipped (Matt's Nov 23 decision) and is superseded by this build. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification. httpUpdate fetches the APP image, not the merged flash image.",
-    "sizeBytes": 1308176
+    "sha256": "70532b26816bb15a8b95183e931fd6cb8a3519e042c669f2c6cbde4bdef249e6",
+    "note": "v0.1.9 (built 2026-11-24): sleep-rate correction (deep-sleep timer runs ~1.07% fast; durations now scaled 1.010x so wakes land at ~03:00), highlight underline in the handwriting style (schedule v4 carries the span; straight stroke + dithered echo, toggleable), quote hold, manual date, and an app-like settings page on the setup network (display settings, hold, date). Serif ladder tops at 36pt (NotoSerif42 dropped to fit the OTA slot; all quotes host-verified to fit). Wake order and paint-first behavior are exactly v0.1.8. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
+    "sizeBytes": 1307248
   }
 }
