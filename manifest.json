@@ -12,11 +12,11 @@
     "sha256": "4ea67d49e1acc6a99d6340d6e9a0f9ca66cbd4b917f25e36691e642758a2d49d"
   },
   "firmware": {
-    "version": "0.1.10",
+    "version": "0.1.11",
     "file": "daily_quote_panel.bin",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
-    "sha256": "ec410b368cbe835ecc4737666b9e76b6970f602f13c72188fc692848d8c7f47f",
-    "note": "v0.1.10 (built 2026-11-24): setup network on EVERY power-on \u2014 a 5-minute WaltQuotes-Setup window opens before the normal wake on any power-on boot (timer wakes, Reset presses and OTA reboots do not open it), extending while a phone is connected (1-hour hard cap). Replaces the power-flip x3 gesture, whose counter any successful WiFi join zeroed \u2014 unreachable within range of the panel's own network. The 15-minute window still serves the never-configured and failed-wakes triggers. Everything else is exactly v0.1.9. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
-    "sizeBytes": 1307408
+    "sha256": "86f400d87d78a5f775fdaafc14ee915d6ed3f37898054dd49427320982dd7ec5",
+    "note": "v0.1.11 (built 2026-11-24): setup-page iOS fix, CSS only. In Apple's Captive Wi-Fi sheet the plain buttons rendered as empty white boxes (the page CSS never set an explicit button text color; the sheet paints it white) and date fields as blank boxes. Buttons/inputs/selects now carry explicit colors, buttons opt out of the native iOS button appearance, and date inputs get a min-height. No behavior changes; everything else is exactly v0.1.10. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
+    "sizeBytes": 1307520
   }
 }
