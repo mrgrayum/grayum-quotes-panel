@@ -12,11 +12,11 @@
     "sha256": "4ea67d49e1acc6a99d6340d6e9a0f9ca66cbd4b917f25e36691e642758a2d49d"
   },
   "firmware": {
-    "version": "0.1.13",
+    "version": "0.1.14",
     "file": "daily_quote_panel.bin",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
-    "sha256": "e7697cbfbbd8ea079f5a54e458ad3a6a88f412d740d7d7e32742c2aa6923b9a4",
-    "note": "v0.1.13 (built 2026-11-24): setup-page paints (Save display settings and 'Show the quote now') no longer advance to the next day's quote when the panel has no date belief in the setup window \u2014 they repaint the quote the panel is currently on. The morning wake's dateless fallback advance is unchanged. Everything else is exactly v0.1.12. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
-    "sizeBytes": 1307584
+    "sha256": "273053a14c910770218f0780ac014c75cdf62217983bc067a52f30bbbcf913d9",
+    "note": "v0.1.14 (built 2026-11-24): on a power-on boot the setup network now opens AFTER the wake \u2014 paint, WiFi join, clock sync, check-in, firmware update \u2014 instead of before it, so the panel phones home within the first minute and the setup window follows. Includes the v0.1.13 no-advance settings paint fix and everything in v0.1.12. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
+    "sizeBytes": 1307616
   }
 }
