@@ -12,11 +12,11 @@
     "sha256": "4ea67d49e1acc6a99d6340d6e9a0f9ca66cbd4b917f25e36691e642758a2d49d"
   },
   "firmware": {
-    "version": "0.1.11",
+    "version": "0.1.12",
     "file": "daily_quote_panel.bin",
     "url": "https://mrgrayum.github.io/grayum-quotes-panel/daily_quote_panel.bin",
-    "sha256": "86f400d87d78a5f775fdaafc14ee915d6ed3f37898054dd49427320982dd7ec5",
-    "note": "v0.1.11 (built 2026-11-24): setup-page iOS fix, CSS only. In Apple's Captive Wi-Fi sheet the plain buttons rendered as empty white boxes (the page CSS never set an explicit button text color; the sheet paints it white) and date fields as blank boxes. Buttons/inputs/selects now carry explicit colors, buttons opt out of the native iOS button appearance, and date inputs get a min-height. No behavior changes; everything else is exactly v0.1.10. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
+    "sha256": "f23ade20dc0d5a43a9ddc276f07182fc2c2753e6a1041c5d86ab5db891b0cf09",
+    "note": "v0.1.12 (built 2026-11-24): saving display settings on the setup page now also repaints the quote with the new settings immediately (the same hold-aware paint as 'Show the quote now') \u2014 no second tap needed. Includes the v0.1.11 setup-page iOS CSS fix verbatim; everything else is exactly v0.1.10. Panels on 0.1.10 update straight to this build. The firmware channel reads only version + url; sha256/sizeBytes recorded for verification.",
     "sizeBytes": 1307520
   }
 }
